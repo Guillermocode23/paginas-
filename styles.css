@@ -1,0 +1,438 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-text {
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    font-size: 3rem;
+}
+
+header {
+    background-color: black;
+    padding: 0px 0;
+    box-shadow: 0 2px 4px rgba(15, 1, 1, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-hero {
+    display: flex;
+    justify-content: left; /* Cambiado para alinear a la derecha */
+    align-items: center; /* Centrar verticalmente */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    margin-top: 70px; /* Añadir margen superior para que no se solape */
+    position: sticky;
+    top: 0;
+    z-index: 1200; /* Asegurar que esté por encima de otros elementos */
+}
+
+
+.container-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centrar verticalmente */
+}
+
+.icon-container {
+    width: 100px; 
+    height: 100px;
+    display: flex;
+    justify-content: center; /* Centrar el logo horizontalmente */
+    align-items: center;
+    margin-right: 20px; 
+}
+
+.logo {
+    width: 100%; 
+    height: 100%; 
+    background-image: url('img/logo.jpg');
+    background-size: contain; /* Ajustar al tamaño del contenedor */
+    background-repeat: no-repeat;
+}
+
+.text-container h1 {
+    font-family: 'Archivo Black', serif;
+    margin: 0;
+    font-size: 2rem;
+    color: #004AAD;
+    text-transform: uppercase;
+}
+.text-container h2 {
+    font-family: 'Archivo Black', serif;
+    margin: 0;
+    font-size: 2rem;
+    color: #E09551;
+    text-transform: uppercase;
+}
+
+/* Otros estilos permanecen sin cambios */
+
+.container-navbar {
+    background-color: black;
+    padding: 0px 0px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: left;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu li a {
+    font-family: 'Roboto', serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: #E09551;
+}
+
+.banner {
+    font-family: 'Roboto', serif;
+    padding: 100px 50px; /* Ajustar el espacio interno del banner */
+    text-align: center; /* Centrar el contenido del banner */
+    position: relative; /* Añadir posición relativa */
+    /* Asegurar que esté por debajo de .container-hero */
+    margin-top: 200px; /* Ajustar margen superior según sea necesario */
+}
+
+.banner h2 {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.banner a {
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    margin: 20px 0;
+    position: relative; /* Añadir posición relativa */
+    
+}
+
+.banner a:hover {
+    background-color: #E09551;
+    opacity: 1;
+}
+
+.gallery {
+    display: flex;
+    position: relative; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.specials {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+}
+
+.heading-1 {
+    font-family: 'Dm serif display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card-product {
+    font-family: 'Roboto', serif;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-product .container-img {
+    position: relative;
+}
+
+.card-product .container-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-product .discount {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #E3CA07;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.card-product .button-group {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.card-product .button-group span {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-product .button-group span:hover {
+    background-color: #0056b3;
+}
+
+.card-product .content-card-product {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-product .stars {
+    color: #f0ad4e;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card-product h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card-product .add-cart {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.card-product .add-cart:hover {
+    color: #007bff;
+}
+
+.card-product .price {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.card-product .price span {
+    font-size: 1rem;
+    color: black;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.blogs {
+    padding: 40px 20px;
+}
+
+.container-blogs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card-blog {
+    font-family: 'Roboto', serif;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-blog .container-img {
+    position: relative;
+}
+
+.card-blog .container-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-blog .button-group-blog {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.card-blog .button-group-blog span {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-blog .button-group-blog span:hover {
+    background-color: #0056b3;
+}
+
+.card-blog .content-blog {
+    padding: 20px;
+}
+
+.card-blog .content-blog h3 {
+    font-family: 'Roboto', serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card-blog .content-blog span {
+    font-size: 1rem;
+    color: #777;
+}
+
+.card-blog .content-blog p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.card-blog .btn-read-more {
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-blog .btn-read-more:hover {
+    background-color: #E3CA07;
+}
+
+.footer {
+    font-family: 'Roboto', serif;
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menu-footer {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-info,
+.information {
+    flex: 1;
+}
+
+.title-footer {
+    font-family: 'Roboto', serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.contact-info ul,
+.information ul {
+    list-style: none;
+    padding: 0;
+    color: #ddd;
+}
+
+.contact-info ul li,
+.information ul li {
+    margin-bottom: 10px;
+}
+
+.contact-info .social-icons {
+    margin-top: 10px;
+}
+
+.social-icons span {
+    font-size: 1.5rem;
+    color: green;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.social-icons span:hover {
+    color: #0056b3;
+}
+
+.information a {
+    font-family: 'Roboto', serif;
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.information a:hover {
+    color: #fff;
+}
+
+.copyright {
+    font-family: 'Roboto', serif;
+    background-color: #000;
+    padding: 10px 0;
+    text-align: center;
+    color: #ccc;
+    font-size: 0.8rem;
+}
+
+
+.footer p {
+    margin: 0;
+}
